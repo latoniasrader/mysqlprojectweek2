@@ -94,7 +94,7 @@ private static final String CATEGORY_TABLE = "category";
 	  String sql = "SELECT * FROM " + PROJECT_TABLE + " WHERE project_id = ?";
 	  
 	  try(Connection conn = DbConnection.getConnection()){
-		  startTransaction(conn);
+		startTransaction  (conn);
 		  
 	  try {
 		Project project = null;
@@ -191,7 +191,7 @@ private static final String CATEGORY_TABLE = "category";
 				+ "estimated_hours = ?, "
 				+ "actual_hours = ?, "
 				+ "difficulty = ?, "
-				+ "notes = ?, "
+				+ "notes = ? "
 				+ "WHERE project_id = ?";
 		// @formatter:on
 		
@@ -226,6 +226,7 @@ private static final String CATEGORY_TABLE = "category";
 		String sql = "DELETE FROM " + PROJECT_TABLE + " WHERE project_id = ?";
 		
 		try(Connection conn = DbConnection.getConnection()){
+			startTransaction(conn);
 			
 		  try(PreparedStatement stmt = conn.prepareStatement(sql)){
 			  setParameter(stmt, 1, projectId, Integer.class);

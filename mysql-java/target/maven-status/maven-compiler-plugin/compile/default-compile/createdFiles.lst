@@ -1,0 +1,15 @@
+projects\entity\Material.class
+projects\ProjectsApp.class
+projects\entity\Category.class
+provided\util\DaoBase$DaoException.class
+projects\service\ProjectService.class
+projects\dao\ProjectDao.class
+provided\util\DaoBase.class
+projects\dao\DbConnection.class
+projects\package-info.class
+projects\entity\Step.class
+projects\exception\DbException.class
+projects\entity\Project.class
+projects\service\package-info.class
+projects\exception\package-info.class
+provided\util\DaoBase$ProjectDao.class
